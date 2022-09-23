@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background: linear-gradient(45deg, #07171d, #0B3948);
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.grid-container button {
+    cursor: pointer;
+    font-size: 2rem;
+    /* border: 1px solid #416165; */
+    border: none;
+    outline: none;
+    background-color: #416165;
+    color: #edffcc;
+    transition: .2s ease-in-out;
+}
+
+.grid-container button:hover {
+    background-color: #0B3948;
+    color: #D6F49D;
+}
+
+.grid-container .operator {
+    background-color: #D6F49D;
+    color: #0B3948;
+    transition: .2s ease-in-out;
+}
+
+.grid-container .operator:hover {
+    background-color: #0B3948;
+    color: #FB4D3D;
+
+}
+
+.grid-container .operator-equal {
+    background-color: #07171d;
+    color: #FB4D3D;
+
+}
+
+.grid-container .operator-equal:hover {
+    background-color: #FB4D3D;
+    color: #D6F49D;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.grid-container > .output {
+    grid-column: 1 / -1;
+    background-color: #072731;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.grid-container > .output > .previous-operand {
+    color: #FB4D3D;
+    font-size: 1.4rem;
+} 
+
+.grid-container .current-operand {
+    color: #edffcc;
+    font-size: 1.8rem;
+}
+
