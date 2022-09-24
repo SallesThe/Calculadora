@@ -132,14 +132,3 @@ body.light {
     color: #07171d;
     transition: .2s;
 }
-
-.grid-container button > .btn-number.light {
-    cursor: pointer;
-    font-size: 2rem;
-    /* border: 1px solid #416165; */
-    border: none;
-    outline: none;
-    background-color: #0B3948;
-    color: #FB4D3D;
-    transition: .2s ease-in-out;
-}

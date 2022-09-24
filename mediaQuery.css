@@ -1,4 +1,4 @@
-@media (max-width: 80em) { /* Monitores HD 12 */
+@media (max-width: 85.37em) { /* Monitores HD 12 */
     .grid-container {
         grid-template-columns: repeat(4, 80px);
         grid-template-rows: minmax(120px, auto) repeat(5, 80px);

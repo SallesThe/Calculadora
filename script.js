@@ -144,7 +144,6 @@ deleteButton.addEventListener('click', () => {
 
 const btn = document.getElementById('btnSwitch');
 
-const buttons = document.getElementsByClassName('.btn-number');
 
 btn.addEventListener('click', () => {
 
@@ -154,6 +153,5 @@ btn.addEventListener('click', () => {
     document.body.classList.toggle('light');
     btn.classList.toggle('light');
     btn.innerHTML = textbtn;
-    buttons.classList.toggle('light');
 });
 
