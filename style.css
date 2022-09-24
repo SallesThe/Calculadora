@@ -9,14 +9,14 @@
 }
 
 body {
-    background: linear-gradient(45deg, #07171d, #0B3948);
+    background: linear-gradient(to right, #07171d, #0B3948);
 }
 
 .grid-container {
     display: grid;
     justify-content: center;
     align-content: center;
-    min-height: 100vh;
+    min-height: 90vh;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
@@ -69,6 +69,7 @@ body {
     background-color: #072731;
     display: flex;
     flex-direction: column;
+    border-radius: 10px 10px 0px 0px;
     align-items: flex-end;
     justify-content: space-around;
     padding: 10px;
@@ -86,3 +87,59 @@ body {
     font-size: 1.8rem;
 }
 
+.btn-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.btn-switch button {
+    max-width: 300px;
+    width: 100%;
+    cursor: pointer;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #D6F49D;
+    color: #07171d;
+    transition: .2s;
+}
+
+.btn-switch button:hover {
+    height: 45px;
+    background-color: #07171d;
+    color: #FB4D3D;
+}
+
+
+
+/*  LIGHT MODE */
+
+
+body.light {
+    background: linear-gradient(to left, #95b8c4, #D6F49D) 
+}
+
+.btn-switch button.light {
+    background-color: #07171d;
+    color: #D6F49D;
+    transition: .2s;
+}
+
+.btn-switch button.light:hover {
+    background-color: #D6F49D;
+    color: #07171d;
+    transition: .2s;
+}
+
+.grid-container button > .btn-number.light {
+    cursor: pointer;
+    font-size: 2rem;
+    /* border: 1px solid #416165; */
+    border: none;
+    outline: none;
+    background-color: #0B3948;
+    color: #FB4D3D;
+    transition: .2s ease-in-out;
+}

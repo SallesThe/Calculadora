@@ -7,6 +7,7 @@ const allClearButton = document.querySelector('[data-all-clear]');
 const previousOperandTextElement = document.querySelector('[data-previous-operand]');
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
 
+
 class Calculator {
     constructor(previousOperandTextElement, currentOperandTextElement) {
         this.previousOperandTextElement = previousOperandTextElement;
@@ -67,6 +68,10 @@ class Calculator {
         this.previousOperand = "";
     }
 
+    delete() {
+        this.currentOperand = this.currentOperand.toString().slice(0, -1);
+    }
+
     chooseOperation(operation) {
 
         if (this.currentOperand === "") return;
@@ -81,8 +86,6 @@ class Calculator {
         this.currentOperand = ''
     }
 
-
-
     appendNumber(number) {
         if (this.currentOperand.includes('.') && number === '.') return;
 
@@ -93,12 +96,12 @@ class Calculator {
         this.currentOperand = '';
         this.previousOperand = '';
         this.operation = undefined;
+
     }
 
     updateDisplay() {
-        this.previousOperandTextElement.innerHTML = `${this.formatDisplayNumber(this.previousOperand)} ${this.operation || ""}`;
-        this.currentOperandTextElement.innerHTML = this.formatDisplayNumber(this.currentOperand);
-
+        this.previousOperandTextElement.innerHTML = `${this.formatDisplayNumber(this.previousOperand)} ${this.operation || ''}`;
+        this.currentOperandTextElement.innerHTML = this.formatDisplayNumber(this.currentOperand || '0');
     }
 }
 
@@ -128,7 +131,29 @@ allClearButton.addEventListener('click', () => {
 
 equalsButton.addEventListener('click', () => {
     calculator.calculate();
-    calculator.updateDisplay;
+    calculator.updateDisplay();
 });
 
+
+deleteButton.addEventListener('click', () => {
+    calculator.delete();
+    calculator.updateDisplay();
+});
+
+// SWITCH THEME
+
+const btn = document.getElementById('btnSwitch');
+
+const buttons = document.getElementsByClassName('.btn-number');
+
+btn.addEventListener('click', () => {
+
+
+    let textbtn = document.body.classList.contains('light') ? 'LIGHT MODE' : 'DARK MODE'
+
+    document.body.classList.toggle('light');
+    btn.classList.toggle('light');
+    btn.innerHTML = textbtn;
+    buttons.classList.toggle('light');
+});
 

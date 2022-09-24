@@ -11,35 +11,38 @@
     </head>
     <body>
         <div class="grid-container">
-            <div class="output">
-                <div data-previous-operand class="previous-operand">BEM-VINDO</div>
-                <div data-current-operand class="current-operand">Nome</div>
-            </div>
+            <div id="display" class="output light-theme">
+                <div data-previous-operand class="previous-operand">SEJA BEM-VINDO</div>
+                <div data-current-operand class="current-operand">0</div>
+            </div> 
             <button data-all-clear class="span-two">AC</button>
             <button data-delete class="operator-del">DEL</button>
             <button data-operator class="operator">÷</button>
 
-            <button data-number>1</button>
-            <button data-number>2</button>
-            <button data-number>3</button>
+            <button class="btn-number" data-number>7</button>
+            <button class="btn-number" data-number>8</button>
+            <button class="btn-number" data-number >9</button>
 
             <button data-operator class="operator">*</button>
-            <button data-number>4</button>
-            <button data-number>5</button>
-            <button data-number>6</button>
+            <button class="btn-number" data-number>4</button>
+            <button class="btn-number" data-number>5</button>
+            <button class="btn-number" data-number>6</button>
 
             <button data-operator class="operator">+</button>
 
-            <button data-number>7</button>
-            <button data-number>8</button>
-            <button data-number>9</button>
+            <button class="btn-number" data-number>1</button>
+            <button class="btn-number" data-number>2</button>
+            <button class="btn-number" data-number>3</button>
 
             <button data-operator class="operator">-</button>
-            <button data-number class="span-two">0</button>
+            <button data-number class="span-two bd-radious-0">0</button>
             <button data-number >.</button>
-            <button data-equals class="operator-equal">=</button>
+            <button data-equals class="operator-equal bd-radious-btn">=</button>
         </div>
 
+        <div class="btn-switch">
+            <button id="btnSwitch">LIGHT MODE</button>
+        </div>
 
         <script src="script.js"></script>
     </body>
